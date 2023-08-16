@@ -20,15 +20,15 @@ const App = () => {
         {success && <p>{success}</p>}
         
            { success==='' &&
-             <div>
+             <form onSubmit={logginIn}>
               Username: <input type="text" onChange={(e)=>setUser([...user, {name:e.target.value}])}/>
               <br />
               <br />
               Password: <input type="password" onChange={(e)=>setUser([...user, {password:e.target.value}])}/>
               <br />
               <br />
-              <button onClick={logginIn}>Log in</button>
-             </div>
+              <button type="submit">Log in</button>
+             </form>
             }
         
     </div>
